@@ -1,30 +1,33 @@
-class XuatKho extends MayAnh{
-		private int soLuongXuat;
-		private String ngayXuatMay;
+import java.util.Scanner;
+class Panasonic extends MayAnh {
+    private int slTon;
+    private double trongLuong;
 
-		public XuatKho(int soLuongXuat,String ngayXuatMay){
-			this.soLuongXuat=soLuongXuat;
-			this.ngayXuatMay=ngayXuatMay;
-		}
-		public XuatKho(String maMayAnh,String tenMayAnh,String nSX,Double giaMay,int soLuong,int soLuongXuat,String ngayXuatMay){
-			super(maMayAnh,tenMayAnh,nSX,giaMay,soLuong);
-			this.soLuongXuat=soLuongXuat;
-			this.ngayXuatMay=ngayXuatMay;
-		}
-		public int getSoLuongXuat(){
-			return soLuongXuat;
-		}
-		public void setSoLuongXuat(int soLuongXuat){
-			this.soLuongXuat=soLuongXuat;
-		}
-		public String getNgayXuatMay(){
-			return ngayXuatMay;
-		}
-		public void setNgayXuatMay(String ngayXuatMay){
-			this.ngayXuatMay=ngayXuatMay;
-		}
-		@Override
-		public String toString(){
-			return super.toString() + "\n, so luong xuat: " + this.soLuongXuat + ",ngay xuat may: " + this.ngayXuatMay;
-		}
-	}
+    public  Panasonic() {}
+
+    public Panasonic(int gia, int namSX, String hangSX, String quocGia, String hangMay, String maMay, int slTon, double trongLuong) {
+        super(gia, namSX, hangSX, quocGia, hangMay, maMay);
+        this.slTon = slTon;
+        this.trongLuong = trongLuong;
+    }
+
+    @Override
+    public void nhap() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhap Sl ton: "); slTon = sc.nextInt();
+        System.out.print("Nhap Trong luong: "); trongLuong = sc.nextDouble();
+        super.nhap();
+    }
+
+    @Override
+    public void xuat() {
+        super.xuat();
+        System.out.print("\tSluong ton: " + slTon);
+        System.out.println("\tTrong luong: "+ trongLuong + "kg");
+    }
+
+    @Override
+    public double capNhatGiaTien() {
+        return super.capNhatGiaTien();
+    }
+}

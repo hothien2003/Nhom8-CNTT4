@@ -1,17 +1,29 @@
-class liStXuatKHo{
-		private ArrayList<XuatKho>liStXuat;
-		public liStXuatKHo(ArrayList<XuatKho> liStXuat){
-			this.liStXuat=liStXuat;
-		}
-		public liStXuatKHo(){
-			this.liStXuat=new ArrayList<XuatKho>();
-		}
-		public void addXuatKho(XuatKho xk){
-			this.liStXuat.add(xk);
-		}
-		public void printlistXuatKho(){
-			for(XuatKho xuatKho: liStXuat){
-				System.out.println(xuatKho);
-			}
-		}
-	}
+import java.util.Scanner;
+class PhieuXuatKho extends Phieu{
+    private int ngayXuat;
+
+    public PhieuXuatKho() {
+    }
+
+    public PhieuXuatKho(int ngayXuat) {
+        this.ngayXuat = ngayXuat;
+    }
+
+    public int getNgayXuat() {
+        return ngayXuat;
+    }
+
+    public void setNgayXuat(int ngayXuat) {
+        this.ngayXuat = ngayXuat;
+    }
+
+    @Override
+    public void nhap() {
+        super.nhap();
+    }
+
+    @Override
+    public void xuat() {
+        super.xuat();
+    }
+}

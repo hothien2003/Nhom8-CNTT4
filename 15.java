@@ -1,17 +1,34 @@
- class liStNhapKho{
-		private ArrayList<NhapKho> liStNhap;
-		public liStNhapKho(ArrayList<NhapKho> liStNhap){
-			this.liStNhap=liStNhap;
-		}
-		public liStNhapKho(){
-			this.liStNhap=new ArrayList<NhapKho>();
-		}
-		public void addNhapKho(NhapKho nk){
-			this.liStNhap.add(nk);
-		}
-		public void printlistNhapKho(){
-			for(NhapKho nhapKho: liStNhap){
-				System.out.println(nhapKho);
-			}
-		}
-	}
+import java.util.Scanner;
+class PhieuNhapKho extends Phieu {
+
+    private int ngayNhap;
+    public PhieuNhapKho() {
+    }
+
+    public PhieuNhapKho(int ngayNhap) {
+        this.ngayNhap = ngayNhap;
+    }
+
+    public int getNgayNhap() {
+        return ngayNhap;
+    }
+
+    public void setNgayNhap(int ngayNhap) {
+        this.ngayNhap = ngayNhap;
+    }
+
+    @Override
+    public void nhap() {
+        super.nhap();
+        Scanner n = new Scanner(System.in);
+        System.out.print("Ngay Nhap kho: ");
+        ngayNhap = n.nextInt();
+    }
+
+    @Override
+    public void xuat() {
+        super.xuat();
+    }
+
+
+}
